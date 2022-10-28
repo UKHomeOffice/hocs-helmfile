@@ -1,0 +1,57 @@
+helmDefaults:
+  cleanupOnFail: true
+  timeout: 600
+  wait: true
+  historyMax: 3
+
+templates:
+  cs: &cs
+    values:
+      - ./base/charts/charts.yaml
+      - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/versions.yaml
+  wcs: &wcs
+    values:
+      - ./base/charts/charts.yaml
+      - ./base/charts/wcs/charts.yaml.gotmpl
+      - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/versions.yaml
+
+environments:
+  cs-qa:
+    <<: *cs
+  cs-qax:
+    <<: *cs
+  cs-demo:
+    <<: *cs
+  cs-preprod:
+    <<: *cs
+  cs-prod:
+    <<: *cs
+  wcs-qa:
+    <<: *wcs
+  wcs-qax:
+    <<: *wcs
+  wcs-demo:
+    <<: *wcs
+  wcs-preprod:
+    <<: *wcs
+  wcs-prod:
+    <<: *wcs
+
+repositories:
+{{- range $name, $url := .Values.repositories }}
+- name: {{ $name }}
+  url: {{ $url }}
+{{- end }}
+
+releases:
+{{- range .Values.charts }}
+{{- if .deploy }}
+- name: {{ .name }}
+  chart: {{ .chart }}
+  version: {{ .version }}
+  values:
+  {{- range .values }}
+    - {{ . }}
+  {{- end }}
+{{- end }}
+{{- end }}

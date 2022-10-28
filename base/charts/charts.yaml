@@ -1,0 +1,23 @@
+templates:
+  default: &default
+    values:
+      - ./base/values/{{ default "notprod" (trimPrefix "-" (.Environment.Name | regexFind "[-]prod$")) }}/{{ .Release.Name }}.yaml.gotmpl
+      - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/values/{{ .Release.Name }}.yaml.gotmpl
+
+repositories:
+  hocs-helm-charts: https://ukhomeoffice.github.io/hocs-helm-charts
+
+charts:
+  hocs-notify:
+    name: hocs-notify
+    deploy: true
+    chart: hocs-helm-charts/hocs-notify
+    version: 1.0.1
+    <<: *default
+
+  hocs-templates:
+    name: hocs-templates
+    deploy: true
+    chart: hocs-helm-charts/hocs-templates
+    version: 1.0.0
+    <<: *default
