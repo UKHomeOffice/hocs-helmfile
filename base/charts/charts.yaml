@@ -9,6 +9,13 @@ repositories:
 
 charts:
 
+  hocs-casework:
+    name: hocs-casework
+    deploy: true
+    chart: hocs-helm-charts/hocs-casework
+    version: 1.0.0
+    <<: *default
+
   hocs-docs:
     name: hocs-docs
     deploy: true
@@ -20,13 +27,6 @@ charts:
     name: hocs-docs-converter
     deploy: true
     chart: hocs-helm-charts/hocs-docs-converter
-    version: 1.0.0
-    <<: *default
-
-  hocs-casework:
-    name: hocs-casework
-    deploy: true
-    chart: hocs-helm-charts/hocs-casework
     version: 1.0.0
     <<: *default
 
