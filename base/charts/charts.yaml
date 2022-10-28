@@ -28,3 +28,10 @@ charts:
     chart: hocs-helm-charts/hocs-docs
     version: 1.0.0
     <<: *default
+
+  hocs-docs-converter:
+    name: hocs-docs-converter
+    deploy: true
+    chart: hocs-helm-charts/hocs-docs-converter
+    version: 1.0.0
+    <<: *default
