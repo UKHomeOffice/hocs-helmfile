@@ -23,6 +23,13 @@ charts:
     version: 1.0.0
     <<: *default
 
+  hocs-casework:
+    name: hocs-casework
+    deploy: true
+    chart: hocs-helm-charts/hocs-casework
+    version: 1.0.0
+    <<: *default
+
   hocs-notify:
     name: hocs-notify
     deploy: true
