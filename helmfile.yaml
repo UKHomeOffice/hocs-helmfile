@@ -8,10 +8,12 @@ templates:
   cs: &cs
     values:
       - ./base/charts/charts.yaml
+      - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/charts.yaml.gotmpl
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/versions.yaml
   wcs: &wcs
     values:
       - ./base/charts/charts.yaml
+      - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/charts.yaml.gotmpl
       - ./base/charts/wcs/charts.yaml.gotmpl
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/versions.yaml
 

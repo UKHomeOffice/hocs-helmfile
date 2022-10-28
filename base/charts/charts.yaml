@@ -16,6 +16,13 @@ charts:
     version: 1.0.0
     <<: *default
 
+  hocs-case-migrator:
+    name: hocs-case-migrator
+    deploy: false
+    chart: hocs-helm-charts/hocs-case-migrator
+    version: 1.0.0
+    <<: *default
+
   hocs-casework:
     name: hocs-casework
     deploy: true
