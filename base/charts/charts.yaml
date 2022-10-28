@@ -43,3 +43,10 @@ charts:
     chart: hocs-helm-charts/hocs-templates
     version: 1.0.0
     <<: *default
+
+  hocs-workflow:
+    name: hocs-workflow
+    deploy: true
+    chart: hocs-helm-charts/hocs-workflow
+    version: 1.0.0
+    <<: *default
