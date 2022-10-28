@@ -8,19 +8,6 @@ repositories:
   hocs-helm-charts: https://ukhomeoffice.github.io/hocs-helm-charts
 
 charts:
-  hocs-notify:
-    name: hocs-notify
-    deploy: true
-    chart: hocs-helm-charts/hocs-notify
-    version: 1.0.1
-    <<: *default
-
-  hocs-templates:
-    name: hocs-templates
-    deploy: true
-    chart: hocs-helm-charts/hocs-templates
-    version: 1.0.0
-    <<: *default
 
   hocs-docs:
     name: hocs-docs
@@ -33,5 +20,19 @@ charts:
     name: hocs-docs-converter
     deploy: true
     chart: hocs-helm-charts/hocs-docs-converter
+    version: 1.0.0
+    <<: *default
+
+  hocs-notify:
+    name: hocs-notify
+    deploy: true
+    chart: hocs-helm-charts/hocs-notify
+    version: 1.0.1
+    <<: *default
+
+  hocs-templates:
+    name: hocs-templates
+    deploy: true
+    chart: hocs-helm-charts/hocs-templates
     version: 1.0.0
     <<: *default
