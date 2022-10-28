@@ -21,3 +21,10 @@ charts:
     chart: hocs-helm-charts/hocs-templates
     version: 1.0.0
     <<: *default
+
+  hocs-docs:
+    name: hocs-docs
+    deploy: true
+    chart: hocs-helm-charts/hocs-docs
+    version: 1.0.0
+    <<: *default
