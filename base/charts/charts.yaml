@@ -9,6 +9,13 @@ repositories:
 
 charts:
 
+  hocs-case-creator:
+    name: hocs-case-creator
+    deploy: true
+    chart: hocs-helm-charts/hocs-case-creator
+    version: 1.0.0
+    <<: *default
+
   hocs-casework:
     name: hocs-casework
     deploy: true
