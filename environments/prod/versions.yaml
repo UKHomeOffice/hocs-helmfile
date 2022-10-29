@@ -2,8 +2,9 @@ versions:
   hocs_docs: 3.5.1
   hocs_docs_converter: 1.6.2
   hocs_case_creator: 1.10.2
-  hocs_case_migrator: 1.10.2
   hocs_casework: 3.10.3
   hocs_notify: 1.4.1
+  hocs_search: 2.8.2
+  hocs_search_consumer: 2.8.2
   hocs_templates: 1.7.1
   hocs_workflow: 2.11.4

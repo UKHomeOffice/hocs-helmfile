@@ -51,6 +51,20 @@ charts:
     version: 1.0.1
     <<: *default
 
+  hocs-search:
+    name: hocs-search
+    deploy: true
+    chart: hocs-helm-charts/hocs-search
+    version: 1.0.0
+    <<: *default
+
+  hocs-search-consumer:
+    name: hocs-search-consumer
+    deploy: true
+    chart: hocs-helm-charts/hocs-search-consumer
+    version: 1.0.0
+    <<: *default
+
   hocs-templates:
     name: hocs-templates
     deploy: true
