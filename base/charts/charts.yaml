@@ -51,6 +51,13 @@ charts:
     version: 1.0.1
     <<: *default
 
+  hocs-queue-tool:
+    name: hocs-queue-tool
+    deploy: true
+    chart: hocs-helm-charts/hocs-queue-tool
+    version: 1.0.0
+    <<: *default
+
   hocs-search:
     name: hocs-search
     deploy: true
