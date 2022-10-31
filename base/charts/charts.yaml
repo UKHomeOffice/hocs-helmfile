@@ -9,6 +9,13 @@ repositories:
 
 charts:
 
+  hocs-audit:
+    name: hocs-audit
+    deploy: true
+    chart: hocs-helm-charts/hocs-audit
+    version: 1.1.0
+    <<: *default
+
   hocs-case-creator:
     name: hocs-case-creator
     deploy: true
@@ -42,6 +49,13 @@ charts:
     deploy: true
     chart: hocs-helm-charts/hocs-docs-converter
     version: 1.0.0
+    <<: *default
+
+  hocs-extracts:
+    name: hocs-extracts
+    deploy: true
+    chart: hocs-helm-charts/hocs-extracts
+    version: 1.1.0
     <<: *default
 
   hocs-notify:
