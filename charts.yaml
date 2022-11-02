@@ -65,6 +65,13 @@ charts:
     version: 2.0.0
     <<: *default
 
+  hocs-management-ui:
+    name: hocs-management-ui
+    deploy: true
+    chart: hocs-helm-charts/hocs-management-ui
+    version: 2.0.0
+    <<: *default
+
   hocs-notify:
     name: hocs-notify
     deploy: true
