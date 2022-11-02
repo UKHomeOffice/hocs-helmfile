@@ -11,91 +11,91 @@ charts:
 
   hocs-audit:
     name: hocs-audit
-    deploy: true
+    deploy: false
     chart: hocs-helm-charts/hocs-audit
-    version: 1.1.0
+    version: 2.0.0
     <<: *default
 
   hocs-case-creator:
     name: hocs-case-creator
     deploy: true
     chart: hocs-helm-charts/hocs-case-creator
-    version: 1.0.0
+    version: 2.0.1
     <<: *default
 
   hocs-case-migrator:
     name: hocs-case-migrator
     deploy: false
     chart: hocs-helm-charts/hocs-case-migrator
-    version: 1.0.0
+    version: 2.0.2
     <<: *default
 
   hocs-casework:
     name: hocs-casework
     deploy: true
     chart: hocs-helm-charts/hocs-casework
-    version: 1.0.0
+    version: 2.0.0
     <<: *default
 
   hocs-docs:
     name: hocs-docs
     deploy: true
     chart: hocs-helm-charts/hocs-docs
-    version: 1.0.0
+    version: 2.0.0
     <<: *default
 
   hocs-docs-converter:
     name: hocs-docs-converter
     deploy: true
     chart: hocs-helm-charts/hocs-docs-converter
-    version: 1.0.0
+    version: 2.0.0
     <<: *default
 
   hocs-extracts:
     name: hocs-extracts
-    deploy: true
+    deploy: false
     chart: hocs-helm-charts/hocs-extracts
-    version: 1.1.0
+    version: 2.0.1
     <<: *default
 
   hocs-notify:
     name: hocs-notify
     deploy: true
     chart: hocs-helm-charts/hocs-notify
-    version: 1.0.1
+    version: 2.0.0
     <<: *default
 
   hocs-queue-tool:
     name: hocs-queue-tool
     deploy: true
     chart: hocs-helm-charts/hocs-queue-tool
-    version: 1.0.0
+    version: 2.0.2
     <<: *default
 
   hocs-search:
     name: hocs-search
     deploy: true
     chart: hocs-helm-charts/hocs-search
-    version: 1.0.0
+    version: 2.0.0
     <<: *default
 
   hocs-search-consumer:
     name: hocs-search-consumer
     deploy: true
     chart: hocs-helm-charts/hocs-search-consumer
-    version: 1.0.0
+    version: 2.0.1
     <<: *default
 
   hocs-templates:
     name: hocs-templates
     deploy: true
     chart: hocs-helm-charts/hocs-templates
-    version: 1.0.0
+    version: 2.0.0
     <<: *default
 
   hocs-workflow:
     name: hocs-workflow
     deploy: true
     chart: hocs-helm-charts/hocs-workflow
-    version: 1.0.0
+    version: 2.0.0
     <<: *default
