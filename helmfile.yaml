@@ -1,18 +1,18 @@
 helmDefaults:
-  cleanupOnFail: true
   timeout: 600
   wait: true
   historyMax: 3
+  createNamespace: false
 
 templates:
   cs: &cs
     values:
-      - ./base/charts/charts.yaml
+      - ./charts.yaml
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/charts.yaml.gotmpl
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/versions.yaml
   wcs: &wcs
     values:
-      - ./base/charts/charts.yaml
+      - ./charts.yaml
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/charts.yaml.gotmpl
       - ./base/charts/wcs/charts.yaml.gotmpl
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/versions.yaml
@@ -20,17 +20,15 @@ templates:
 environments:
   cs-qa:
     <<: *cs
-  cs-qax:
-    <<: *cs
   cs-demo:
     <<: *cs
   cs-preprod:
     <<: *cs
   cs-prod:
     <<: *cs
+  hocs-qax:
+    <<: *cs
   wcs-qa:
-    <<: *wcs
-  wcs-qax:
     <<: *wcs
   wcs-demo:
     <<: *wcs
