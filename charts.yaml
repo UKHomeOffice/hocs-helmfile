@@ -79,6 +79,13 @@ charts:
     version: 2.0.0
     <<: *default
 
+  hocs-outbound-proxy:
+    name: hocs-outbound-proxy
+    deploy: true
+    chart: hocs-helm-charts/hocs-outbound-proxy
+    version: 2.0.1
+    <<: *default
+
   hocs-queue-tool:
     name: hocs-queue-tool
     deploy: true
