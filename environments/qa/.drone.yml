@@ -1,0 +1,34 @@
+---
+kind: pipeline
+type: kubernetes
+name: deploy qa
+trigger:
+  event:
+    - push
+  branch:
+    - main
+
+steps:
+
+  - &deploy
+    name: cs-qa
+    image: quay.io/ukhomeofficedigital/hocs-helm-kubectl:1.1.0
+    environment:
+      KUBE_CLUSTER: acp-notprod
+      KUBE_NAMESPACE: cs-qa
+      KUBE_SERVER: https://kube-api-notprod.notprod.acp.homeoffice.gov.uk
+      KUBE_TOKEN:
+        from_secret: cs_notprod
+      ALLOWED_IPS:
+        from_secret: ALLOWED_IPS
+    commands:
+      - helmfile apply --environment cs-qa
+
+  - <<: *deploy
+    name: wcs-qa
+    environment:
+      KUBE_NAMESPACE: wcs-qa
+    commands:
+      - helmfile apply --environment wcs-qa
+    depends_on:
+      - cs-qa
