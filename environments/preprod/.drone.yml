@@ -1,0 +1,24 @@
+---
+kind: pipeline
+type: kubernetes
+name: deploy preprod
+trigger:
+  event:
+    - push
+  branch:
+    - main
+
+steps:
+
+  - name: cs-preprod
+    image: quay.io/ukhomeofficedigital/hocs-helm-kubectl:1.1.0
+    environment:
+      KUBE_CLUSTER: acp-prod
+      KUBE_NAMESPACE: cs-preprod
+      KUBE_SERVER: https://kube-api-prod.prod.acp.homeoffice.gov.uk
+      KUBE_TOKEN:
+        from_secret: cs_prod
+      ALLOWED_IPS:
+        from_secret: ALLOWED_IPS
+    commands:
+      - helmfile apply --environment cs-preprod
