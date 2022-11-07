@@ -1,0 +1,34 @@
+---
+kind: pipeline
+type: kubernetes
+name: deploy demo
+trigger:
+  event:
+    - push
+  branch:
+    - main
+
+steps:
+
+  - &deploy
+    name: cs-demo
+    image: quay.io/ukhomeofficedigital/hocs-helm-kubectl:1.1.0
+    environment:
+      KUBE_CLUSTER: acp-notprod
+      KUBE_NAMESPACE: cs-demo
+      KUBE_SERVER: https://kube-api-notprod.notprod.acp.homeoffice.gov.uk
+      KUBE_TOKEN:
+        from_secret: cs_notprod
+      ALLOWED_IPS:
+        from_secret: ALLOWED_IPS
+    commands:
+      - helmfile apply --environment cs-demo
+
+  - <<: *deploy
+    name: wcs-demo
+    environment:
+      KUBE_NAMESPACE: wcs-demo
+    commands:
+      - helmfile apply --environment wcs-demo
+    depends_on:
+      - cs-demo
