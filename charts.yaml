@@ -114,6 +114,13 @@ charts:
     version: 2.0.0
     <<: *default
 
+  hocs-toolbox:
+    name: hocs-toolbox
+    deploy: true
+    chart: hocs-helm-charts/hocs-toolbox
+    version: 1.0.0
+    <<: *default
+
   hocs-workflow:
     name: hocs-workflow
     deploy: true
