@@ -1,0 +1,24 @@
+---
+kind: pipeline
+type: kubernetes
+name: deploy qax
+trigger:
+  event:
+    - push
+  branch:
+    - main
+
+steps:
+
+  - name: hocs-qax
+    image: quay.io/ukhomeofficedigital/hocs-helm-kubectl:1.1.0
+    environment:
+      KUBE_CLUSTER: acp-notprod
+      KUBE_NAMESPACE: hocs-qax
+      KUBE_SERVER: https://kube-api-notprod.notprod.acp.homeoffice.gov.uk
+      KUBE_TOKEN:
+        from_secret: cs_notprod
+      ALLOWED_IPS:
+        from_secret: ALLOWED_IPS
+    commands:
+      - helmfile apply --environment hocs-qax
