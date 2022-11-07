@@ -2,6 +2,10 @@
 hocs-generic-service:
   version: {{ .Values.versions.hocs_management_ui }}
 
+  ingress:
+    external:
+      allowedIps: {{ env "ALLOW_LIST" }}
+
 {{- if contains .Environment.Name "wcs-" }}
   clusterPrefix: wcs
 
