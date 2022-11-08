@@ -1,18 +1,18 @@
 versions:
-  hocs_audit: 2.16.0
-  hocs_docs: 3.5.1
-  hocs_docs_converter: 1.6.2
-  hocs_case_creator: 1.10.2
-  hocs_case_migrator: 1.10.2
-  hocs_casework: 3.11.2
-  hocs_extracts: 2.16.0
-  hocs_frontend: 2.23.4
-  hocs_management_ui: 2.1.2
-  hocs_notify: 1.4.1
-  hocs_outbound_proxy: 1.4.2
-  hocs_queue_tool: 1.7.2
-  hocs_search: 2.8.2
-  hocs_search_consumer: 2.8.2
-  hocs_templates: 1.7.1
-  hocs_toolbox: 1.0.1
-  hocs_workflow: 2.14.0
+  hocs_audit:
+  hocs_case_creator:
+  hocs_case_migrator:
+  hocs_casework:
+  hocs_docs:
+  hocs_docs_converter:
+  hocs_extracts:
+  hocs_frontend:
+  hocs_management_ui:
+  hocs_notify:
+  hocs_outbound_proxy:
+  hocs_queue_tool:
+  hocs_search:
+  hocs_search_consumer:
+  hocs_templates:
+  hocs_toolbox:
+  hocs_workflow:
