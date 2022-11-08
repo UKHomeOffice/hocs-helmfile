@@ -22,13 +22,11 @@ steps:
       ALLOWED_IPS:
         from_secret: ALLOWED_IPS
     commands:
-      - helmfile apply --environment cs-demo
+      - bash -x helmfile-deploy.sh
 
   - <<: *deploy
     name: wcs-demo
     environment:
       KUBE_NAMESPACE: wcs-demo
-    commands:
-      - helmfile apply --environment wcs-demo
     depends_on:
       - cs-demo

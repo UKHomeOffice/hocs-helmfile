@@ -21,4 +21,4 @@ steps:
       ALLOWED_IPS:
         from_secret: ALLOWED_IPS
     commands:
-      - helmfile apply --environment hocs-qax
+      - bash -x helmfile-deploy.sh

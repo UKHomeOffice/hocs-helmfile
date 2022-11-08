@@ -21,4 +21,4 @@ steps:
       ALLOWED_IPS:
         from_secret: ALLOWED_IPS
     commands:
-      - helmfile apply --environment cs-preprod
+      - bash -x helmfile-deploy.sh
