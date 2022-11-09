@@ -3,16 +3,16 @@ versions:
   hocs_case_creator:
   hocs_case_migrator:
   hocs_casework:
-  hocs_docs:
-  hocs_docs_converter:
+  hocs_docs: 3.6.0
+  hocs_docs_converter: 1.7.0
   hocs_extracts:
   hocs_frontend:
   hocs_management_ui:
-  hocs_notify:
+  hocs_notify: 1.5.1
   hocs_outbound_proxy: 1.5.0
   hocs_queue_tool:
   hocs_search:
   hocs_search_consumer:
-  hocs_templates:
+  hocs_templates: 1.8.0
   hocs_toolbox:
   hocs_workflow:
