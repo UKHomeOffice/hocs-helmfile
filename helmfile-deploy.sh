@@ -17,3 +17,5 @@ kubectl config set-context helm \
 kubectl config use-context helm
 
 helmfile apply --environment ${KUBE_NAMESPACE} -n ${KUBE_NAMESPACE} --kube-context helm
+
+kubectl rollout restart deployment/hocs-frontend -n ${KUBE_NAMESPACE}
