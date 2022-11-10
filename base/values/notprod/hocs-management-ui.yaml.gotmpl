@@ -23,7 +23,7 @@ hocs-generic-service:
     external:
       enabled: true
       host: {{ .Environment.Name | regexFind "[^-]+$" }}-management.wcs-notprod.homeoffice.gov.uk
-      allowedIps: {{ env "ALLOW_LIST" }}
+      allowedIps: {{ env "ALLOWED_IPS" }}
     internal:
       enabled: true
       host: {{ .Environment.Name | regexFind "[^-]+$" }}-management.internal.wcs-notprod.homeoffice.gov.uk
@@ -36,7 +36,7 @@ hocs-generic-service:
     external:
       enabled: true
       host: {{ .Environment.Name | regexFind "[^-]+$" }}-management.cs-notprod.homeoffice.gov.uk
-      allowedIps: {{ env "ALLOW_LIST" }}
+      allowedIps: {{ env "ALLOWED_IPS" }}
     internal:
       enabled: true
       host: {{ .Environment.Name | regexFind "[^-]+$" }}-management.internal.cs-notprod.homeoffice.gov.uk
