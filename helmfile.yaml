@@ -3,6 +3,7 @@ helmDefaults:
   wait: true
   historyMax: 3
   createNamespace: false
+  cleanupOnFail: true
 
 templates:
   cs: &cs
