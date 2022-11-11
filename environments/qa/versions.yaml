@@ -6,7 +6,7 @@ versions:
   hocs_docs: 3.6.0
   hocs_docs_converter: 1.7.0
   hocs_extracts: 2.17.2
-  hocs_frontend: 2.25.6
+  hocs_frontend: 2.25.7
   hocs_management_ui: 2.2.3
   hocs_notify: 1.5.1
   hocs_outbound_proxy: 1.5.0
@@ -15,4 +15,4 @@ versions:
   hocs_search_consumer: 2.9.2
   hocs_templates: 1.8.0
   hocs_toolbox: 1.0.1
-  hocs_workflow: 2.14.1
+  hocs_workflow: 2.14.2
