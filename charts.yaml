@@ -13,117 +13,117 @@ charts:
     name: hocs-audit
     deploy: true
     chart: hocs-helm-charts/hocs-audit
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-case-creator:
     name: hocs-case-creator
     deploy: true
     chart: hocs-helm-charts/hocs-case-creator
-    version: 2.0.1
+    version: ^3.0.0
     <<: *default
 
   hocs-case-migrator:
     name: hocs-case-migrator
     deploy: false
     chart: hocs-helm-charts/hocs-case-migrator
-    version: 2.0.3
+    version: ^3.0.0
     <<: *default
 
   hocs-casework:
     name: hocs-casework
     deploy: true
     chart: hocs-helm-charts/hocs-casework
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-docs:
     name: hocs-docs
     deploy: true
     chart: hocs-helm-charts/hocs-docs
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-docs-converter:
     name: hocs-docs-converter
     deploy: true
     chart: hocs-helm-charts/hocs-docs-converter
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-extracts:
     name: hocs-extracts
     deploy: true
     chart: hocs-helm-charts/hocs-extracts
-    version: 2.0.1
+    version: ^3.0.0
     <<: *default
 
   hocs-frontend:
     name: hocs-frontend
     deploy: true
     chart: hocs-helm-charts/hocs-frontend
-    version: 2.0.0
+    version: ^4.0.0
     <<: *default
 
   hocs-management-ui:
     name: hocs-management-ui
     deploy: true
     chart: hocs-helm-charts/hocs-management-ui
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-notify:
     name: hocs-notify
     deploy: true
     chart: hocs-helm-charts/hocs-notify
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-outbound-proxy:
     name: hocs-outbound-proxy
     deploy: true
     chart: hocs-helm-charts/hocs-outbound-proxy
-    version: 2.0.1
+    version: ^3.0.0
     <<: *default
 
   hocs-queue-tool:
     name: hocs-queue-tool
     deploy: true
     chart: hocs-helm-charts/hocs-queue-tool
-    version: 2.0.2
+    version: ^3.0.0
     <<: *default
 
   hocs-search:
     name: hocs-search
     deploy: true
     chart: hocs-helm-charts/hocs-search
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-search-consumer:
     name: hocs-search-consumer
     deploy: true
     chart: hocs-helm-charts/hocs-search-consumer
-    version: 2.0.1
+    version: ^3.0.0
     <<: *default
 
   hocs-templates:
     name: hocs-templates
     deploy: true
     chart: hocs-helm-charts/hocs-templates
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default
 
   hocs-toolbox:
     name: hocs-toolbox
     deploy: true
     chart: hocs-helm-charts/hocs-toolbox
-    version: 1.0.0
+    version: ^2.0.0
     <<: *default
 
   hocs-workflow:
     name: hocs-workflow
     deploy: true
     chart: hocs-helm-charts/hocs-workflow
-    version: 2.0.0
+    version: ^3.0.0
     <<: *default

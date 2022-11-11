@@ -1,3 +1,17 @@
 ---
 hocs-generic-service:
   version: {{ .Values.versions.hocs_queue_tool }}
+
+  deployment:
+    annotations:
+      downscaler/downtime: 'Mon-Sun 00:00-06:55 Europe/London,Mon-Sun 23:05-24:00 Europe/London'
+
+  app:
+    env:
+      queues:
+        - 'audit'
+        - 'case-creator'
+        - 'document'
+        - 'notify'
+        - 'search'
+        - 'case-migrator'

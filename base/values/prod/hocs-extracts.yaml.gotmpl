@@ -2,13 +2,27 @@
 hocs-generic-service:
   version: {{ .Values.versions.hocs_extracts }}
 
+  deployment:
+    annotations:
+      downscaler/downtime: 'Mon-Sun 00:00-04:50 Europe/London,Mon-Sun 23:05-24:00 Europe/London'
+
 {{- if contains .Environment.Name "wcs-" }}
   clusterPrefix: wcs
 
   keycloak:
     realm: https://sso.digital.homeoffice.gov.uk/auth/realms/HOCS
     domain: wcs.homeoffice.gov.uk
+{{- else }}
+  clusterPrefix: cs
 
-  dcuCaseView:
-    enabled: false
+  keycloak:
+    realm: https://sso.digital.homeoffice.gov.uk/auth/realms/hocs-prod
+    domain: cs.homeoffice.gov.uk
 {{- end }}
+
+  app:
+    resources:
+      limits:
+        memory: 1536Mi
+      requests:
+        memory: 1536Mi

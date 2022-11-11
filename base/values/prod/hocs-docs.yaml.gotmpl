@@ -1,3 +1,17 @@
 ---
 hocs-generic-service:
   version: {{ .Values.versions.hocs_docs }}
+
+  autoscale:
+    enabled: true
+
+  deployment:
+    annotations:
+      downscaler/downtime: 'Mon-Sun 00:00-04:50 Europe/London,Mon-Sun 23:05-24:00 Europe/London'
+
+  app:
+    resources:
+      limits:
+        memory: 1280Mi
+      requests:
+        memory: 1280Mi

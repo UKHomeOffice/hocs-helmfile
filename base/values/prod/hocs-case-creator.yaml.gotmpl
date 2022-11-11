@@ -1,3 +1,11 @@
 ---
 hocs-generic-service:
   version: {{ .Values.versions.hocs_case_creator }}
+
+  deployment:
+    annotations:
+      downscaler/downtime: "Mon-Sun 00:00-05:10 Europe/London,Mon-Sun 22:55-24:00 Europe/London"
+
+  app:
+    env:
+      ignoredTypes: 'UKVI_COMPLAINTS'
