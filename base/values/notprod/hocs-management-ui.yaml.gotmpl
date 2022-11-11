@@ -2,13 +2,7 @@
 hocs-generic-service:
   version: {{ .Values.versions.hocs_management_ui }}
 
-  isProd: false
-
-  autoscale:
-    enabled: false
-
   deployment:
-    replicas: 1
     annotations:
       downscaler/downtime: "Mon-Sun 00:00-08:00 Europe/London,Mon-Sun 18:00-24:00 Europe/London"
 
@@ -28,6 +22,8 @@ hocs-generic-service:
       enabled: true
       host: {{ .Environment.Name | regexFind "[^-]+$" }}-management.internal.wcs-notprod.homeoffice.gov.uk
 {{- else }}
+  clusterPrefix: cs
+
   keycloak:
     realm: https://sso-dev.notprod.homeoffice.gov.uk/auth/realms/hocs-notprod
     domain: cs-notprod.homeoffice.gov.uk
@@ -42,11 +38,22 @@ hocs-generic-service:
       host: {{ .Environment.Name | regexFind "[^-]+$" }}-management.internal.cs-notprod.homeoffice.gov.uk
 {{- end }}
 
+  truststore:
+    resources:
+      requests:
+        cpu: 50m
+
+  proxy:
+    resources:
+      requests:
+        cpu: 50m
+
   app:
     resources:
       limits:
         memory: 512Mi
       requests:
+        cpu: 50m
         memory: 512Mi
     env:
-      isNotProd: 1
+      isNotProd: '1'
