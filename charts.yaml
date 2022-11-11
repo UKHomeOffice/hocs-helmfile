@@ -11,7 +11,7 @@ charts:
 
   hocs-audit:
     name: hocs-audit
-    deploy: false
+    deploy: true
     chart: hocs-helm-charts/hocs-audit
     version: 2.0.0
     <<: *default
@@ -53,7 +53,7 @@ charts:
 
   hocs-extracts:
     name: hocs-extracts
-    deploy: false
+    deploy: true
     chart: hocs-helm-charts/hocs-extracts
     version: 2.0.1
     <<: *default
