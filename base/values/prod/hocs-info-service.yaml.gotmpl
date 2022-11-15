@@ -1,0 +1,15 @@
+---
+version: {{ .Values.versions.hocs_info_service }}
+
+data:
+  enabled: true
+  image:
+    name: hocs-data
+
+app:
+  env:
+    allowedDomains: 'homeoffice.gov.uk,hmpo.gov.uk,cluster2security.gov.uk,combatingdrugs.gov.uk,gro.gov.uk'
+
+members:
+  enabled: true
+  refresh: '0 5 * * *'
