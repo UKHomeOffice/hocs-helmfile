@@ -65,6 +65,13 @@ charts:
     version: ^4.0.0
     <<: *default
 
+  hocs-info-service:
+    name: hocs-info-service
+    deploy: true
+    chart: hocs-helm-charts/hocs-info-service
+    version: ^1.0.0
+    <<: *default
+
   hocs-management-ui:
     name: hocs-management-ui
     deploy: true

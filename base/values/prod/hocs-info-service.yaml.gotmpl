@@ -1,0 +1,23 @@
+---
+version: {{ .Values.versions.hocs_info_service }}
+
+deployment:
+  annotations:
+    downscaler/downtime: 'Mon-Sun 00:00-04:45 Europe/London,Mon-Sun 23:05-24:00 Europe/London'
+
+data:
+  enabled: true
+  image:
+    {{- if hasPrefix "wcs-" .Environment.Name }}
+    name: hocs-data-wcs
+    {{- else }}
+    name: hocs-data
+    {{- end }}
+
+app:
+  env:
+    allowedDomains: 'homeoffice.gov.uk,hmpo.gov.uk,cluster2security.gov.uk,combatingdrugs.gov.uk,gro.gov.uk'
+
+members:
+  enabled: true
+  refresh: '0 5 * * *'
