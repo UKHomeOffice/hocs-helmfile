@@ -13,7 +13,11 @@ truststore:
 data:
   enabled: true
   image:
+    {{- if hasPrefix "wcs-" .Environment.Name }}
+    name: hocs-data-wcs
+    {{- else }}
     name: hocs-data
+    {{- end }}
   resources:
     requests:
       cpu: 50m
