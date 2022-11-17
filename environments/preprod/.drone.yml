@@ -20,5 +20,7 @@ steps:
         from_secret: cs_prod
       ALLOWED_IPS:
         from_secret: ALLOWED_IPS
+      RDS_CIDR:
+        from_secret: RDS_CIDR
     commands:
       - bash -x helmfile-deploy.sh
