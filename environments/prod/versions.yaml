@@ -1,6 +1,6 @@
 versions:
   hocs_audit:
-  hocs_case_creator:
+  hocs_case_creator: 1.7.2
   hocs_case_migrator:
   hocs_casework:
   hocs_docs:
