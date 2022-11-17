@@ -10,7 +10,7 @@ versions:
   hocs_info_service:
   hocs_management_ui:
   hocs_network_policies:
-  hocs_notify:
+  hocs_notify: 1.4.1
   hocs_outbound_proxy:
   hocs_queue_tool:
   hocs_search:
