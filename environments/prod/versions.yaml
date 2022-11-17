@@ -7,7 +7,9 @@ versions:
   hocs_docs_converter:
   hocs_extracts:
   hocs_frontend:
+  hocs_info_service:
   hocs_management_ui:
+  hocs_network_policies:
   hocs_notify:
   hocs_outbound_proxy:
   hocs_queue_tool:

@@ -9,6 +9,7 @@ versions:
   hocs_frontend: 2.21.1
   hocs_info_service: 3.2.20
   hocs_management_ui: 2.0.18
+  hocs_network_policies: 1.1.0
   hocs_notify: 1.4.1
   hocs_outbound_proxy: 1.5.0
   hocs_queue_tool: 1.10.5
