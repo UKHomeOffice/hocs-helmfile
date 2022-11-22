@@ -10,7 +10,8 @@ trigger:
 
 steps:
 
-  - name: cs-preprod
+  - &deploy
+    name: cs-preprod
     image: quay.io/ukhomeofficedigital/hocs-helm-kubectl:1.1.0
     environment:
       KUBE_CLUSTER: acp-prod
@@ -24,3 +25,10 @@ steps:
         from_secret: RDS_CIDR
     commands:
       - bash -x helmfile-deploy.sh
+
+  - <<: *deploy
+    name: wcs-preprod
+    environment:
+      KUBE_NAMESPACE: wcs-preprod
+    depends_on:
+      - cs-preprod
