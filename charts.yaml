@@ -37,6 +37,13 @@ charts:
     version: ^3.0.0
     <<: *default
 
+  decs-casework:
+    name: decs-casework
+    deploy: false
+    chart: hocs-helm-charts/hocs-casework
+    version: ^3.0.0
+    <<: *default
+
   hocs-docs:
     name: hocs-docs
     deploy: false

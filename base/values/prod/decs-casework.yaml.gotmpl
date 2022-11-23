@@ -1,0 +1,23 @@
+---
+hocs-generic-service:
+  version: {{ .Values.versions.hocs_casework }}
+  nameOverride: decs-casework
+  deploymentEnvs: hocs-casework
+
+  service:
+    enabled: false
+
+  autoscale:
+    enabled: false
+
+  deployment:
+    replicas: 1
+    annotations:
+      downscaler/downtime: 'Mon-Sun 00:00-04:50 Europe/London,Mon-Sun 23:05-24:00 Europe/London'
+
+  app:
+    resources:
+      limits:
+        memory: 3072Mi
+      requests:
+        memory: 3072Mi
