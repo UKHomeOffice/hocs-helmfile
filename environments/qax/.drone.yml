@@ -22,5 +22,7 @@ steps:
         from_secret: ALLOWED_IPS
       RDS_CIDR:
         from_secret: RDS_CIDR_NOTPROD
+      AWS_ACCOUNT:
+        from_secret: AWS_ACCOUNT_NOTPROD
     commands:
       - bash -x helmfile-deploy.sh

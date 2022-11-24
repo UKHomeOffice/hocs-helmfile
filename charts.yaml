@@ -1,7 +1,7 @@
 templates:
   default: &default
     values:
-      - ./base/values/{{ default "notprod" (trimPrefix "-" (.Environment.Name | regexFind "[-]prod$")) }}/{{ .Release.Name }}.yaml.gotmpl
+      - ./base/values/{{ default "notprod" (trimPrefix "-" (.Environment.Name | regexFind "[-]preprod|prod$")) }}/{{ .Release.Name }}.yaml.gotmpl
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/values/{{ .Release.Name }}.yaml.gotmpl
 
 repositories:
