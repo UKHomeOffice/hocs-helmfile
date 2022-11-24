@@ -1,14 +1,13 @@
 templates:
   default: &default
     values:
-      - ./base/values/{{ default "notprod" (trimPrefix "-" (.Environment.Name | regexFind "[-]preprod|prod$")) }}/{{ .Release.Name }}.yaml.gotmpl
+      - ./base/values/{{ env KUBE_CLUSTER | regexFind "[^-]+$" }}/{{ .Release.Name }}.yaml.gotmpl
       - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/values/{{ .Release.Name }}.yaml.gotmpl
 
 repositories:
   hocs-helm-charts: https://ukhomeoffice.github.io/hocs-helm-charts
 
 charts:
-
   hocs-audit:
     name: hocs-audit
     deploy: false
