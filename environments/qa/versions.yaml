@@ -1,7 +1,7 @@
 versions:
   hocs_audit: 2.18.3
   hocs_case_creator: 1.12.8
-  hocs_case_migrator: 1.12.9
+  hocs_case_migrator: 1.12.8
   hocs_casework: 3.16.0
   hocs_docs: 3.6.4
   hocs_docs_converter: 1.7.3
