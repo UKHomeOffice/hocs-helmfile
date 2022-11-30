@@ -2,22 +2,25 @@
 hocs-generic-service:
   version: {{ .Values.versions.hocs_extracts }}
 
+  autoscale:
+    enabled: true
+
   deployment:
     annotations:
       downscaler/downtime: 'Mon-Sun 00:00-04:50 Europe/London,Mon-Sun 23:05-24:00 Europe/London'
 
-{{- if contains .Environment.Name "wcs-" }}
+{{- if hasPrefix "wcs-" .Environment.Name }}
   clusterPrefix: wcs
 
   keycloak:
     realm: https://sso.digital.homeoffice.gov.uk/auth/realms/HOCS
-    domain: wcs.homeoffice.gov.uk
+    domain: www.wcs.homeoffice.gov.uk
 {{- else }}
   clusterPrefix: cs
 
   keycloak:
     realm: https://sso.digital.homeoffice.gov.uk/auth/realms/hocs-prod
-    domain: cs.homeoffice.gov.uk
+    domain: www.cs.homeoffice.gov.uk
 {{- end }}
 
   app:

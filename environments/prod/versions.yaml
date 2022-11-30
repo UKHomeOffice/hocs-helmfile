@@ -1,11 +1,11 @@
 versions:
-  hocs_audit:
+  hocs_audit: 2.17.3
   hocs_case_creator: 1.9.1
   hocs_case_migrator:
   hocs_casework: 3.11.2
   hocs_docs: 3.5.1
   hocs_docs_converter: 1.6.2
-  hocs_extracts:
+  hocs_extracts: 2.17.3
   hocs_frontend:
   hocs_info_service: 3.2.20
   hocs_management_ui:
