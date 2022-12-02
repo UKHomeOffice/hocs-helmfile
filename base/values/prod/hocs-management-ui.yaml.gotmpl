@@ -18,13 +18,13 @@ hocs-generic-service:
 
   keycloak:
     realm: https://sso.digital.homeoffice.gov.uk/auth/realms/HOCS
-    domain: www.wcs.homeoffice.gov.uk
+    domain: www.wcs-management.homeoffice.gov.uk
 {{- else }}
   clusterPrefix: cs
 
   keycloak:
     realm: https://sso.digital.homeoffice.gov.uk/auth/realms/hocs-prod
-    domain: www.cs.homeoffice.gov.uk
+    domain: www.cs-management.homeoffice.gov.uk
 {{- end }}
 
   app:
