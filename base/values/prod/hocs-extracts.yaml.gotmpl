@@ -29,3 +29,8 @@ hocs-generic-service:
         memory: 1536Mi
       requests:
         memory: 1536Mi
+
+{{- if hasPrefix "cs-" .Environment.Name }}
+dcuCaseView:
+  enabled: true
+{{- end }}
