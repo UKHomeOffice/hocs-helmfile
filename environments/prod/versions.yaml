@@ -1,14 +1,14 @@
 versions:
   hocs_audit: 2.17.3
-  hocs_case_creator: 1.9.1
+  hocs_case_creator: 1.10.2
   hocs_case_migrator:
   hocs_casework: 3.11.2
   hocs_docs: 3.5.1
   hocs_docs_converter: 1.6.2
   hocs_extracts: 2.17.3
-  hocs_frontend: 2.21.1
-  hocs_info_service: 3.2.20
-  hocs_management_ui: 2.0.18
+  hocs_frontend: 2.22.0
+  hocs_info_service: 3.2.24
+  hocs_management_ui: 2.1.1
   hocs_network_policies:
   hocs_notify: 1.4.1
   hocs_outbound_proxy: 1.0.1
@@ -17,4 +17,4 @@ versions:
   hocs_search_consumer: 2.8.2
   hocs_templates: 1.7.1
   hocs_toolbox: 1.3.1
-  hocs_workflow: 2.11.3
+  hocs_workflow: 2.11.4
