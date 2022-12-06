@@ -120,6 +120,20 @@ charts:
     version: ^3.0.0
     <<: *default
 
+  hocs-search-opensearch:
+    name: hocs-search-opensearch
+    deploy: false
+    chart: hocs-helm-charts/hocs-search-opensearch
+    version: ^1.0.0
+    <<: *default
+
+  hocs-search-consumer-opensearch:
+    name: hocs-search-consumer-opensearch
+    deploy: false
+    chart: hocs-helm-charts/hocs-search-consumer-opensearch
+    version: ^1.0.0
+    <<: *default
+
   hocs-templates:
     name: hocs-templates
     deploy: false
