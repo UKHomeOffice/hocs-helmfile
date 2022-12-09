@@ -6,7 +6,7 @@ versions:
   hocs_docs: 3.6.7
   hocs_docs_converter: 1.7.4
   hocs_extracts: 2.18.3
-  hocs_frontend: 666b66f9352a7b2522f5e790699d6942c641a7d4
+  hocs_frontend: 2.28.9
   hocs_info_service: 3.3.13
   hocs_management_ui: 2.2.15
   hocs_network_policies: 1.1.0
