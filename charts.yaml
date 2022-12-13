@@ -103,7 +103,7 @@ charts:
     name: hocs-queue-tool
     deploy: false
     chart: hocs-helm-charts/hocs-queue-tool
-    version: ^3.0.0
+    version: ^4.0.0
     <<: *default
 
   hocs-search:
