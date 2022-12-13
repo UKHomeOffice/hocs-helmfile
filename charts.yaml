@@ -1,8 +1,8 @@
 templates:
   default: &default
     values:
-      - ./base/values/{{ env "KUBE_CLUSTER" | regexFind "[^-]+$" }}/{{ .Release.Name }}.yaml.gotmpl
-      - ./environments/{{ .Environment.Name | regexFind "[^-]+$" }}/values/{{ .Release.Name }}.yaml.gotmpl
+      - ./base/values/{{ regexReplaceAll "^acp-" (env "KUBE_CLUSTER") "" }}/{{ .Release.Name }}.yaml.gotmpl
+      - ./environments/{{ regexReplaceAll "^w?cs-" (.Environment.Name) "" }}/values/{{ .Release.Name }}.yaml.gotmpl
 
 repositories:
   hocs-helm-charts: https://ukhomeoffice.github.io/hocs-helm-charts
