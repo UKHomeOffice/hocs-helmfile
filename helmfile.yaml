@@ -27,6 +27,8 @@ environments:
     <<: *cs
   cs-prod:
     <<: *cs
+  cs-uatmigration:
+    <<: *cs
   hocs-qax:
     <<: *cs
   wcs-qa:
