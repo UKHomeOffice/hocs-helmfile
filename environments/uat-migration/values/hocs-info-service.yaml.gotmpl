@@ -11,16 +11,8 @@ truststore:
       cpu: 50m
 
 data:
-  enabled: true
-  image:
-    {{- if hasPrefix "wcs-" .Environment.Name }}
-    name: hocs-data-wcs
-    {{- else }}
-    name: hocs-data
-    {{- end }}
-  resources:
-    requests:
-      cpu: 50m
+  enabled: false
+
 app:
   env:
     springProfiles: 'sns, sqs'
