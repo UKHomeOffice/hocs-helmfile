@@ -1,1 +1,11 @@
 ---
+hocs-generic-service:
+  version: {{ .Values.versions.hocs_search_consumer }}
+
+  deployment:
+    annotations:
+      downscaler/downtime: "Mon-Sun 00:00-04:50 Europe/London,Mon-Sun 23:10-24:00 Europe/London"
+
+  app:
+    env:
+      elasticMode: 'SINGULAR'

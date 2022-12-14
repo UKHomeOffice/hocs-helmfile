@@ -1,1 +1,5 @@
 ---
+version: {{ .Values.versions.hocs_network_policies }}
+
+rdsCIDR: {{ env "RDS_CIDR" }}
+awsAccount: {{ env "AWS_ACCOUNT" }}

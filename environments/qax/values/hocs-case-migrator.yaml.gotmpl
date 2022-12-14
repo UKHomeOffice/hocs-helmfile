@@ -1,10 +1,10 @@
 ---
 hocs-generic-service:
-  version: {{ .Values.versions.hocs_templates }}
+  version: {{ .Values.versions.hocs_case_migrator }}
 
   deployment:
     annotations:
-      downscaler/downtime: "Mon-Sun 00:00-07:55 Europe/London,Mon-Sun 18:05-24:00 Europe/London"
+      downscaler/downtime: "Mon-Sun 00:00-08:10 Europe/London,Mon-Sun 17:50-24:00 Europe/London"
 
   truststore:
     resources:
@@ -12,6 +12,8 @@ hocs-generic-service:
         cpu: 50m
 
   app:
+    env:
+      ignoredTypes: ''
     resources:
       limits:
         memory: 512Mi
