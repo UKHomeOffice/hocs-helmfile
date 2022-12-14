@@ -1,7 +1,6 @@
 templates:
   default: &default
     values:
-      - ./base/values/{{ regexReplaceAll "^acp-" (env "KUBE_CLUSTER") "" }}/{{ .Release.Name }}.yaml.gotmpl
       - ./environments/{{ regexReplaceAll "^w?cs-" (.Environment.Name) "" }}/values/{{ .Release.Name }}.yaml.gotmpl
 
 repositories:
