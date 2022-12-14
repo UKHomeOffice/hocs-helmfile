@@ -12,7 +12,7 @@ versions:
   hocs_network_policies: 1.1.0
   hocs_notify: 1.5.5
   hocs_outbound_proxy: 1.5.1
-  hocs_queue_tool: 3.1.0
+  hocs_queue_tool: 3.1.1
   hocs_search: 3.0.3
   hocs_search_consumer: 3.0.3
   hocs_templates: 1.8.4
