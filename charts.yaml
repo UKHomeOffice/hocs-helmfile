@@ -1,7 +1,7 @@
 templates:
   default: &default
     values:
-      - ./environments/{{ regexReplaceAll "^w?cs-" (.Environment.Name) "" }}/values/{{ .Release.Name }}.yaml.gotmpl
+      - ./environments/{{ regexReplaceAll "^(w|ho)?cs-" (.Environment.Name) "" }}/values/{{ .Release.Name }}.yaml.gotmpl
 
 repositories:
   hocs-helm-charts: https://ukhomeoffice.github.io/hocs-helm-charts

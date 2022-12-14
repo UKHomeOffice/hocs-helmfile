@@ -9,14 +9,14 @@ templates:
   cs: &cs
     values:
       - ./charts.yaml
-      - ./environments/{{ regexReplaceAll "^w?cs-" (.Environment.Name) "" }}/charts.yaml.gotmpl
-      - ./environments/{{ regexReplaceAll "^w?cs-" (.Environment.Name) "" }}/versions.yaml
+      - ./environments/{{ regexReplaceAll "^(w|ho)?cs-" (.Environment.Name) "" }}/charts.yaml.gotmpl
+      - ./environments/{{ regexReplaceAll "^(w|ho)?cs-" (.Environment.Name) "" }}/versions.yaml
   wcs: &wcs
     values:
       - ./charts.yaml
-      - ./environments/{{ regexReplaceAll "^w?cs-" (.Environment.Name) "" }}/charts.yaml.gotmpl
+      - ./environments/{{ regexReplaceAll "^(w|ho)?cs-" (.Environment.Name) "" }}/charts.yaml.gotmpl
       - ./base/charts/wcs/charts.yaml.gotmpl
-      - ./environments/{{ regexReplaceAll "^w?cs-" (.Environment.Name) "" }}/versions.yaml
+      - ./environments/{{ regexReplaceAll "^(w|ho)?cs-" (.Environment.Name) "" }}/versions.yaml
 
 environments:
   cs-qa:
