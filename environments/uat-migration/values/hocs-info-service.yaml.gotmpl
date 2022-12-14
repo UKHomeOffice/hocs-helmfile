@@ -23,6 +23,7 @@ data:
       cpu: 50m
 app:
   env:
+    springProfiles: 'sns, sqs'
     allowedDomains: 'digital.homeoffice.gov.uk,homeoffice.gov.uk,hmpo.gov.uk,cluster2security.gov.uk,combatingdrugs.gov.uk,gro.gov.uk'
   resources:
     limits:
