@@ -1,1 +1,30 @@
 ---
+
+hocs-generic-service:
+
+  keycloak:
+    enabled: true
+    args:
+      - --config=/etc/secrets/data.yml
+      - --discovery-url={{ .Values.keycloak.realm }}
+      - --openid-provider-proxy=http://hocs-outbound-proxy.{{ .Release.Namespace }}.svc.cluster.local:31290
+      - --enable-logging=true
+      - --enable-json-logging=true
+      - --upstream-url=http://127.0.0.1:{{ include "hocs-app.port" . }}
+      - --upstream-response-header-timeout={{ .Values.keycloak.timeout }}s
+      - --upstream-expect-continue-timeout={{ .Values.keycloak.timeout }}s
+      - --upstream-keepalive-timeout={{ .Values.keycloak.timeout }}s
+      - --server-read-timeout={{ .Values.keycloak.timeout }}s
+      - --server-write-timeout={{ .Values.keycloak.timeout }}s
+      - --resources=uri=/health|white-listed=true
+      - --resources=uri=/public/*|white-listed=true
+      - --resources=uri=/*|roles=CMS_MIGRATION_UAT
+      - --secure-cookie=true
+      - --http-only-cookie=true
+      - --enable-refresh-tokens=true
+      - --encryption-key=$(ENCRYPTION_KEY)
+      - --no-redirects=false
+      - --enable-logout-redirect=true
+      - --listen=127.0.0.1:{{ .Values.keycloak.targetPort }}
+      - --revocation-url={{ .Values.keycloak.realm }}/protocol/openid-connect/logout
+    timeout: 60
