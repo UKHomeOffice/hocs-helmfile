@@ -14,5 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Checkout repository
+      - name: Run Update Action
         uses: UKHomeOffice/update-helmfile-action@v0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
